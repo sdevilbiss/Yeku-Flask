@@ -1,0 +1,25 @@
+<!doctype html>
+
+<title> Cards - {% block title %}{% endblock %}</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+
+<nav>
+  <h1>Cards</h1>
+  <ul>
+      <li><a href="{{ url_for('home')}}">Home</a>
+      <li><a href="{{ url_for('newlist') }}">Study New List</a>
+      <li><a href="{{ url_for('settings') }}">Settings</a>
+  </ul>
+</nav>
+
+<section class="content">
+
+  <header>
+    {% block header %}{% endblock %}
+  </header>
+
+  {% block content %}{% endblock %}
+
+</section>
