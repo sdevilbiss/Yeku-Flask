@@ -6,7 +6,17 @@
 
 {% block content %}
 
-  <h1>{{ token }}</h1>
+<form method="post" action="{{ url_for('trials') }}">
+<input type="text" name="answer" id="answer" />
+<input type="submit" name="submit" id="submit" value="submit answer" />
+
+<div>
+  {{ success }}
+</div>
+
+
+
+</form>
 
 
 
